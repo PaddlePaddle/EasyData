@@ -1,0 +1,43 @@
+DataGen:
+  ops:
+    - randaugment
+    - random_erasing
+    - gridmask
+    - tia_distort
+    - tia_stretch
+    - tia_perspective
+  ori_data_dir: "demo/ocr_data"
+  label_file: "demo/ocr_data/train_list.txt"
+  gen_label: &gen_label labels/all_label.txt
+  model_type: &model_type ocr_rec
+  delimiter: &delimiter "\t"
+  img_save_folder: &img_save_folder "test"
+  gen_ratio: 0
+  gen_num: 5
+  size: 224
+
+FeatureExtract:
+  config: "deploy/configs/ppcv/feature_extract.yaml"
+  thresh: 0.5
+  file_out: "tmp/rm_repeat.txt"
+
+  # indexing engine config
+IndexProcess:
+  index_method: "HNSW32" # supported: HNSW32, IVF, Flat
+  image_root: *img_save_folder
+  index_dir: "./augdata/all_aug"
+  all_label_file:  *gen_label
+  index_operation: "new" # suported: "append", "remove", "new"
+  delimiter: *delimiter
+  dist_type: "IP"
+  embedding_size: 512
+  batch_size: 32
+  return_k: 5
+  score_thres: 0.5
+
+BigModel:
+  model_type: *model_type  # support(cls / ocr_rec)
+  config: "deploy/configs/ppcv/text_recognition.yaml"
+  batch_size: 8
+  thresh: 0.1
+  final_label: "high_socre_label.txt"

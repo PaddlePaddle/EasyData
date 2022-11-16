@@ -1,0 +1,39 @@
+DataGen:
+  mode: text2img
+  config: "deploy/configs/ppdataaug/ocr_rec_gen.yaml"
+  gen_num: 5
+  out_dir: "test"
+  bg_num_per_word: 5
+  threads: 1
+  bg_img_dir: "demo/ocr_rec/bg/"
+  font_dir: "demo/ocr_rec/font"
+  corpus_file: "demo/ocr_rec/corpus.txt"
+  img_save_folder: &img_save_folder output_img
+  gen_label: &gen_label output_img/all_label.txt
+  delimiter: &delimiter "\t"
+
+FeatureExtract:
+  config: "deploy/configs/ppcv/feature_extract.yaml"
+  thresh: 0.5
+  file_out: "tmp/rm_repeat.txt"
+
+  # indexing engine config
+IndexProcess:
+  index_method: "HNSW32" # supported: HNSW32, IVF, Flat
+  image_root: *img_save_folder
+  index_dir: "./augdata/all_aug"
+  all_label_file:  *gen_label
+  index_operation: "new" # suported: "append", "remove", "new"
+  delimiter: *delimiter
+  dist_type: "IP"
+  embedding_size: 512
+  batch_size: 32
+  return_k: 5
+  score_thres: 0.5
+
+BigModel:
+  model_type: ocr_rec  # support(cls / ocr_rec)
+  config: "deploy/configs/ppcv/text_recognition.yaml"
+  batch_size: 8
+  thresh: 0.2
+  final_label: "high_socre_label.txt"
