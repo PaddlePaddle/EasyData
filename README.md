@@ -113,7 +113,7 @@ EasyData 旨在打造一套通用、领先且实用的数据自动扩充与数�
     - [二维码图像过滤工具](docs/zh_CN/PP-DataClean/code_image_filtering.md)
 - 数据扩充
   - [快速体验](docs/zh_CN/PP-DataAug/quick_start.md)
-  - [流程详解](docs/zh_CN/PP-DataAug/EasyDataAug.md)
+  - [流程详解](docs/zh_CN/PP-DataAug/DataAug.md)
 - 开源数据集
   - [目标检测](docs/zh_CN/datasets/datasets/Detection.md)
   - [图像分割](docs/zh_CN/datasets/datasets/Segmentation.md)
