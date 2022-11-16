@@ -22,6 +22,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(parent, './deploy/')))
 import argparse
 
 from ppcv.engine.pipeline import Pipeline
+from ppcv.utils.download import get_demo_path
 from utils.utils import load_yaml
 from python.ppdataaug import PPDataAug
 from python.ppdataaug.utils import config
@@ -192,7 +193,9 @@ def parse_args():
     parser.add_argument("--bg_num_per_word", type=int, default=5)
     parser.add_argument("--threads", type=int, default=1)
     parser.add_argument("--bg_img_dir", type=str, default="demo/ocr_rec/bg")
-    parser.add_argument("--font_dir", type=str, default="demo/ocr_rec/font")
+    parser.add_argument("--font_dir",
+                        type=str,
+                        default="paddlecv://data/font.tar")
     parser.add_argument("--corpus_file",
                         type=str,
                         default="demo/ocr_rec/corpus.txt")
@@ -230,7 +233,7 @@ class PPDA(PPDataAug):
         if args.gen_mode == "text2img":
             self.gen_ocr = GenOCR(self.config["DataGen"]["config"])
             self.bg_img_dir = args.bg_img_dir
-            self.font_dir = args.font_dir
+            self.font_dir = get_demo_path(args.font_dir)
             self.corpus_file = args.corpus_file
             self.bg_img_per_word_num = args.bg_num_per_word
             if platform.system().lower() == 'windows':

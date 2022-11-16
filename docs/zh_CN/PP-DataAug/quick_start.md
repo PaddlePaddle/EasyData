@@ -1,4 +1,4 @@
-# PP-EDA 快速开始
+# PP-DataAug 快速开始
 
 - [1. 安装](#1)
   - [1.1 安装PaddlePaddle](#11)
@@ -13,7 +13,7 @@
 - [4. 小节](#4)
 
 
-本文主要介绍EasyData whl包对[PP-EDA](./EasyDataAug.md)工具的快速使用，如需使用数据质量提升相关功能，请参考教程[PP-LDI](../LDI/quick_start.md)
+本文主要介绍EasyData whl包对[PP-DataAug](./EasyDataAug.md)工具的快速使用，如需使用数据质量提升相关功能，请参考教程[PP-LDI](../LDI/quick_start.md)
 
 
 <a name="1"></a>
@@ -58,11 +58,11 @@ pip3 install dist/easydata-x.x.x-py3-none-any.whl # x.x.x是easydata的版本号
 <a name="21"></a>
 ### 2.1 命令行使用
 
-PP-EDA 提供两种数据自动扩充模式:
+PP-DataAug 提供两种数据自动扩充模式:
 
-- img2img 
+- img2img
 
-适用于图像识别类任务（例如：图像分类、图像识别、OCR文本识别）， 提供原始图片，PP-EDA将自动完成基于图片的数据增广、筛选、清洗功能，输出扩充后的数据集。
+适用于图像识别类任务（例如：图像分类、图像识别、OCR文本识别）， 提供原始图片，PP-DataAug将自动完成基于图片的数据增广、筛选、清洗功能，输出扩充后的数据集。
 
 以分类任务为例，准备原始训练数据和标签文件，其中标签文件内容为：
 
@@ -78,7 +78,7 @@ train/n01601694_4224.JPEG 2
 最终输入数据应有如下文件结构：
 
 ```
-demo/clas_data/ 
+demo/clas_data/
 |-- train  # 原始训练数据
 |   |-- n01440764_15008.JPEG
 |   |-- n01530575_10039.JPEG

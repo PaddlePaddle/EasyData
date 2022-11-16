@@ -157,10 +157,10 @@ class GenOCR(object):
             os.makedirs(cur_thread_img_save_folder, exist_ok=True)
             for bg_path in bg_list:
                 start_time = time.time()
-                font = random.sample(os.listdir(font_path), 1)
+                font_list = random.sample(os.listdir(font_path), 1)
                 try:
                     out, word = self.reader.gen_img_list(
-                        word, os.path.join(font_path, font[0]), bg_path)
+                        word, os.path.join(font_path, font_list[0]), bg_path)
                 except:
                     import traceback
                     traceback.print_exc()

@@ -81,6 +81,14 @@ pip install -r requirements.txt
 
   提供文本语料、字体、背景图，PP-DataAug自动完成基于语料的文本识别图像生成、筛选、清洗功能，输出扩充后的数据集。
 
+  下载字体文件：
+  ```
+  wget -nc -P demo/ocr_rec/ https://paddle-model-ecology.bj.bcebos.com/paddlecv/data/font.tar
+
+  cd demo/ocr_rec/ && tar xf font.tar
+
+  cd ../../
+  ```
 
   字体文件、背景图和原始语料文件`corpus.txt`组织形式 :
 
