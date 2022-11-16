@@ -204,7 +204,7 @@ print(results)
 * `model`：用于指定预测模型，目前支持图像方向矫正模型 `image_orientation`、模糊图像过滤模型 `clarity_assessment`、二维码图像过滤模型 `code_exists`；
 * `device`：用于指定预测平台，目前支持 `CPU`、`GPU`，默认为 `CPU`；
 
-同样以图像方向矫正模型为例，在与 PaddleClas 图像分类模型结合使用时，可以参考示例[代码](../../../deploy/python/ppldi/demo.py)。
+同样以图像方向矫正模型为例，在与 PaddleClas 图像分类模型结合使用时，可以参考示例[代码](../../../deploy/python/ppdataclean/demo.py)。
 
 ## 3. 小结
 

@@ -19,7 +19,7 @@ sys.path.append(os.path.abspath(os.path.join(__dir__, '../deploy/')))
 
 from ppcv.core.config import ArgsParser
 
-from python.ppldi import PPDataImprove
+from python.ppdataclean import PPDataClean
 from python.ppdataaug import PPDataAug
 from utils.utils import load_yaml
 
@@ -62,8 +62,8 @@ if __name__ == '__main__':
     config_path = args.config
     yaml_data = load_yaml(config_path)
     if "DataImprove" in yaml_data:
-        ppldi = PPDataImprove(args)
-        ppldi.run()
+        ppdataclean = PPDataClean(args)
+        ppdataclean.run()
     elif "DataGen" in yaml_data:
         ppdataaug = PPDataAug(args)
         ppdataaug.run()

@@ -19,7 +19,7 @@ from ppcv.engine.pipeline import Pipeline
 from utils.utils import load_yaml
 
 
-class PPDataImprove(object):
+class PPDataClean(object):
     def __init__(self, args):
         self.input = os.path.abspath(args.input)
         self.model_list = self.build_pipeline(args)
