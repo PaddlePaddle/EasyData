@@ -13,7 +13,7 @@
 - [4. 小节](#4)
 
 
-本文主要介绍EasyData whl包对[PP-DataAug](./EasyDataAug.md)工具的快速使用，如需使用数据质量提升相关功能，请参考教程[PP-LDI](../LDI/quick_start.md)
+本文主要介绍EasyData whl包对[PP-DataAug](./DataAug.md)工具的快速使用，如需使用数据质量提升相关功能，请参考教程[PP-DataClean](../PP-DataClean/quick_start.md)
 
 
 <a name="1"></a>
