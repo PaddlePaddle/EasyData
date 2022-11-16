@@ -31,14 +31,13 @@ from .logger import setup_logger
 logger = setup_logger(__name__)
 
 __all__ = [
-    'get_model_path',
-    'get_config_path',
-    'get_dict_path',
+    'get_model_path', 'get_config_path', 'get_dict_path', 'get_demo_path'
 ]
 
 WEIGHTS_HOME = osp.expanduser("~/.cache/paddlecv/models")
 CONFIGS_HOME = osp.expanduser("~/.cache/paddlecv/configs")
 DICTS_HOME = osp.expanduser("~/.cache/paddlecv/dicts")
+DEMO_HOME = osp.expanduser("~/.cache/paddlecv/demo")
 
 # dict of {dataset_name: (download_info, sub_dirs)}
 # download info: [(url, md5sum)]
@@ -97,6 +96,23 @@ def get_dict_path(path):
     return path
 
 
+def get_demo_path(path):
+    """Get demo path from DEMO_HOME, if not exists,
+    download it from url.
+    """
+    if not is_url(path):
+        return path
+    url = parse_url(path)
+    assert url.endswith('.tar'), 'Only supports tar compressed package'
+    path, _ = get_path(url, DEMO_HOME)
+
+    with tarfile.open(path, 'r') as tarObj:
+        dir_path = os.path.dirname(path)
+        tarObj.extractall(path=dir_path)
+    font_path = os.path.splitext(path)[0]
+    return font_path
+
+
 def map_path(url, root_dir, path_depth=1):
     # parse path after download to decompress under root_dir
     assert path_depth > 0, "path_depth should be a positive integer"
@@ -147,8 +163,8 @@ def _download(url, path, md5sum=None):
     fullname = osp.join(path, fname)
     retry_cnt = 0
 
-    while not (osp.exists(fullname) and _check_exist_file_md5(fullname, md5sum,
-                                                              url)):
+    while not (osp.exists(fullname)
+               and _check_exist_file_md5(fullname, md5sum, url)):
         if retry_cnt < DOWNLOAD_RETRY_LIMIT:
             retry_cnt += 1
         else:
@@ -173,10 +189,9 @@ def _download(url, path, md5sum=None):
         total_size = req.headers.get('content-length')
         with open(tmp_fullname, 'wb') as f:
             if total_size:
-                for chunk in tqdm.tqdm(
-                        req.iter_content(chunk_size=1024),
-                        total=(int(total_size) + 1023) // 1024,
-                        unit='KB'):
+                for chunk in tqdm.tqdm(req.iter_content(chunk_size=1024),
+                                       total=(int(total_size) + 1023) // 1024,
+                                       unit='KB'):
                     f.write(chunk)
             else:
                 for chunk in req.iter_content(chunk_size=1024):
@@ -187,7 +202,7 @@ def _download(url, path, md5sum=None):
 
 
 def _check_exist_file_md5(filename, md5sum, url):
-    # if md5sum is None, and file to check is model file, 
+    # if md5sum is None, and file to check is model file,
     # read md5um from url and check, else check md5sum directly
     return _md5check_from_url(filename, url) if md5sum is None \
             and filename.endswith('pdparams') \
@@ -202,8 +217,8 @@ def _md5check_from_url(filename, url):
     req.close()
     if not content_md5 or _md5check(
             filename,
-            binascii.hexlify(base64.b64decode(content_md5.strip('"'))).decode(
-            )):
+            binascii.hexlify(base64.b64decode(
+                content_md5.strip('"'))).decode()):
         return True
     else:
         return False

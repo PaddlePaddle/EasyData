@@ -19,12 +19,12 @@ EasyData 旨在打造一套通用、领先且实用的数据自动扩充与数�
         <td><img src="docs/zh_CN/datasets/dataset_picture/EIvideo.gif" width=300></td>
         <td><img src="docs/zh_CN/datasets/dataset_picture/kie.gif" width=350></td>
     <tr>
-    <tr>    
+    <tr>
          <td align="center">交互式智能视频标注工具</td>
          <td align="center">OCR领域多功能半自动化图形标注</td>
     <tr>
-  
-  
+
+
 </table>
 </div>
 
@@ -33,28 +33,28 @@ EasyData 旨在打造一套通用、领先且实用的数据自动扩充与数�
     <tr>
         <td><img src="docs/zh_CN/datasets/dataset_picture/EIseg.gif"  width=600></td>
     <tr>
-    <tr>    
+    <tr>
          <td align="center">交互式分割标注涵盖通用、人像、遥感、医疗、视频等功能</td>
     <tr>
-  
-  
+
+
 </table>
 </div>
 
 <div align="center">
 <table>
-   
+
   <tr>
         <td><img src="https://raw.githubusercontent.com/PaddlePaddle/PaddleDetection/release/2.5/docs/images/picedet_demo.jpeg" width=600></td>
-  
+
   <tr>
-   
-   <tr>    
+
+   <tr>
          <td align="center">涵盖CV、NLP、Speech等方向的数据集</td>
-        
+
   <tr>
-  
-  
+
+
 </table>
 </div>
 
@@ -77,13 +77,13 @@ EasyData 旨在打造一套通用、领先且实用的数据自动扩充与数�
 ## ⚡ 快速开始
 
 - [数据清洗快速体验](docs/zh_CN/PP-DataClean/quick_start.md)
-- [数据合成工具快速体验](docs/zh_CN/PP-EDA/quick_start.md)
+- [数据合成工具快速体验](docs/zh_CN/PP-DataAug/quick_start.md)
 - [开源数据集和标注工具大全](docs/zh_CN/datasets/dataset.md)
 
 ## 👫 开源社区
 
 - **📑项目合作：** 如果您是企业开发者且有明确的EasyData应用需求，填写问卷链接待更新后可免费与官方团队展开不同层次的合作。
-- **👫加入社区：** 微信扫描二维码并填写问卷之后，加入交流群与EasyData研发工程师1V1交流  
+- **👫加入社区：** 微信扫描二维码并填写问卷之后，加入交流群与EasyData研发工程师1V1交流
 - **🎁社区共建**：EasyData欢迎与大家一起打造行业把数据治理打造成业界的新标准
 
 <div align="center">
@@ -101,7 +101,6 @@ EasyData 旨在打造一套通用、领先且实用的数据自动扩充与数�
 
 ## 📖 文档教程
 
-- 运行环境准备 @晓婷
 - 数据清洗
   - [快速体验](docs/zh_CN/PP-DataClean/quick_start.md)
   - [数据清洗工具集](docs/zh_CN/PP-DataClean/PP-DataClean.md)
@@ -109,8 +108,8 @@ EasyData 旨在打造一套通用、领先且实用的数据自动扩充与数�
     - [模糊图像过滤工具](docs/zh_CN/PP-DataClean/blured_image_filtering.md)
     - [二维码图像过滤工具](docs/zh_CN/PP-DataClean/code_image_filtering.md)
 - 数据扩充
-  - [快速体验](docs/zh_CN/PP-EDA/quick_start.md)
-  - [流程详解](docs/zh_CN/PP-EDA/EasyDataAug.md)
+  - [快速体验](docs/zh_CN/PP-DataAug/quick_start.md)
+  - [流程详解](docs/zh_CN/PP-DataAug/EasyDataAug.md)
 - 开源数据集
   - [目标检测](docs/zh_CN/datasets/datasets/Detection.md)
   - [图像分割](docs/zh_CN/datasets/datasets/Segmentation.md)
