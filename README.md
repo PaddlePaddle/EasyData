@@ -9,7 +9,7 @@ EasyData 旨在打造一套通用、领先且实用的数据自动扩充与数�
 
 |             PP-DataClean 数据清洗效果图             |
 | :----------------------------------------------------: |
-| <img src="./docs/images/PP-dataClean/PP-DataClean-demo.gif"  width = "800" /> |
+| <img src="./docs/images/PP-DataClean/PP-DataClean-demo.gif"  width = "800" /> |
 
 [EDA数据合成效果图@晓婷]
 
