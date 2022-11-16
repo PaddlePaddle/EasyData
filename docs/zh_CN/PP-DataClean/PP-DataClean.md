@@ -1,4 +1,4 @@
-# 数据清洗
+# PP-DataClean
 
 ------
 
@@ -16,4 +16,4 @@ EasyData 是基于飞桨开发的数据处理工具，旨在帮助视觉开发�
 | :--: | :--: | :------: | :------: |
 |图像方向矫正|自动矫正图像，大大提升多项视觉任务在旋转图像上精度|[文档](image_orientation_correction.md)|[下载链接](https://paddleclas.bj.bcebos.com/models/PULC/inference/image_orientation_infer.tar)|
 |模糊图像过滤|判断图像是否模糊，可以广泛应用于模糊图像过滤、视觉相关业务的前处理等|[文档](blured_image_filtering.md)|[下载链接](https://paddleclas.bj.bcebos.com/models/PULC/inference/clarity_assessment_infer.tar)|
-|二维码图像过滤|判断图像是否含有二维码、条形码、小程序码，可以广泛应用于广告码过滤、审核等业务|[文档](code_image_filtering.md)|[下载链接](https://paddleclas.bj.bcebos.com/models/PULC/inference/code_exists_infer.tar)|
+|二维码图像过滤|判断图像是否含有二维码、条形码、小程序码，可以广泛应用于二维码、条形码、小程序码过滤、审核等业务|[文档](code_image_filtering.md)|[下载链接](https://paddleclas.bj.bcebos.com/models/PULC/inference/code_exists_infer.tar)|

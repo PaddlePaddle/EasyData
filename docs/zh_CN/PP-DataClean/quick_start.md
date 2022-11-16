@@ -1,4 +1,4 @@
-# PP-dataClean快速开始
+# PP-DataClean 快速开始
 
 ------
 
@@ -13,7 +13,7 @@
   - [2.1 命令行使用](#21)
       - [2.1.1 图像方向矫正模型](#211)
       - [2.1.2 模糊图像过滤模型](#212)
-      - [2.1.3 广告码图像过滤模型](#232)
+      - [2.1.3 二维码图像过滤模型](#232)
   - [2.2 Python脚本使用](#22)
 - [3.小结](#3)
 
@@ -158,9 +158,9 @@ easydata --model clarity_assessment --input ./clarity_assessment/ --device cpu
 
 <a name="213"></a>
 
-#### 2.1.3 广告码图像过滤模型
+#### 2.1.3 二维码图像过滤模型
 
-EasyData 提供了广告码图像过滤模型，支持识别图像中是否包含条形码、二维码、微信小程序码，通过下方代码即可快速体验：
+EasyData 提供了二维码图像过滤模型，支持识别图像中是否包含二维码，通过下方代码即可快速体验：
 
 ``` bash
 easydata --model code_exists --input ./code_exists/ --device cpu
@@ -175,8 +175,10 @@ easydata --model code_exists --input ./code_exists/ --device cpu
 
 预测结果中，类别 id 与分类标签的映射关系如下：
 
-* 0: no code，表示该图像中不存在广告码；
-* 1: contains code，表示该图像中存在广告码。
+* 0: no code，表示该图像中不存在二维码；
+* 1: contains code，表示该图像中存在二维码。
+
+**备注：** 此时的二维码包含二维码、小程序码、条形码。
 
 <a name="22"></a>
 
@@ -199,11 +201,11 @@ print(results)
 
 如上例所示，在实例化 EasyData 对象时，相关参数说明如下：
 
-* `model`：用于指定预测模型，目前支持图像方向矫正模型 `image_orientation`、模糊图像过滤模型 `clarity_assessment`、广告码图像过滤模型 `code_exists`；
+* `model`：用于指定预测模型，目前支持图像方向矫正模型 `image_orientation`、模糊图像过滤模型 `clarity_assessment`、二维码图像过滤模型 `code_exists`；
 * `device`：用于指定预测平台，目前支持 `CPU`、`GPU`，默认为 `CPU`；
 
 同样以图像方向矫正模型为例，在与 PaddleClas 图像分类模型结合使用时，可以参考示例[代码](../../../deploy/python/ppldi/demo.py)。
 
 ## 3. 小结
 
-通过本节内容，相信您已经熟练掌握 EasyData whl 包的使用方法并获得了初步效果。EasyData 是一套数据治理工具，目前支持对图像方向、清晰度、是否包含广告码进行分类。
+通过本节内容，相信您已经熟练掌握 EasyData whl 包的使用方法并获得了初步效果。EasyData 是一套数据治理工具，目前支持对图像方向、清晰度、是否包含二维码进行分类。
