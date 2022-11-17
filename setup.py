@@ -22,12 +22,6 @@ def get_requirements():
     return requirements
 
 
-def get_readme():
-    with open('./README.md', encoding="utf-8-sig") as f:
-        readme = f.read()
-    return readme
-
-
 setup(
     name='easy-data',
     packages=['easydata', 'easydata.deploy'],
@@ -40,27 +34,24 @@ setup(
     version='0.0.0',
     install_requires=get_requirements(),
     license='Apache License 2.0',
-    description='A tool for improving data quality powered by PaddlePaddle.',
-    long_description=get_readme(),
+    description=
+    'A toolkit for processing data powered by PaddlePaddle, which include data augmentation, data cleaning and data annotation.',
+    long_description=
+    'EasyData aims to create a universal, leading and practical data processing toolkit, that supports automatic data augmentation and cleaning, and provides data annotation tools and a collection of open source datasets to help developers obtain high-quality training and inference data more easily, thereby promoting the practical effect of AI algorithms.',
     long_description_content_type='text/markdown',
     url='https://github.com/PaddlePaddle/EasyData',
     download_url='https://github.com/PaddlePaddle/EasyData.git',
-    # TODO(gaotingquan)
     keywords=[
-        'PP-OCR',
-        'PP-ShiTu',
-        'PP-Human',
+        'PaddlePaddle',
+        'PP-DataAug',
+        'PP-DataClean',
     ],
     classifiers=[
         'Intended Audience :: Developers',
         'Operating System :: OS Independent',
         'Natural Language :: Chinese (Simplified)',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.2',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7', 'Topic :: Utilities'
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9', 'Topic :: Utilities'
     ],
 )
