@@ -1,4 +1,4 @@
-DataImprove:
+PPDataClean:
 ImageOrientation: "deploy/configs/ppcv/image_orientation.yaml"
 ClarityAssessment: "deploy/configs/ppcv/clarity_assessment.yaml"
 CodeExists: "deploy/configs/ppcv/code_exists.yaml"

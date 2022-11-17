@@ -59,24 +59,6 @@ class LoopDict(dict):
             self[key].loop_set(key_list[1:], value)
 
 
-def argsparser():
-
-    def str2bool(v):
-        return v.lower() in ("true", "t", "1")
-
-    parser = argparse.ArgumentParser()
-
-    parser.add_argument("--model", type=str, required=True, help="Model name.")
-
-    parser.add_argument("--output_dir",
-                        type=str,
-                        default=None,
-                        help="Directory of output visualization files.")
-
-    args = parser.parse_args()
-    return vars(args)
-
-
 def init_pipeline_config(**cfg):
     # only support PP-DataClean now
     model_name = cfg["model"]

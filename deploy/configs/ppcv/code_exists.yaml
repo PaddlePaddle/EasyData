@@ -8,6 +8,8 @@ ENV:
   cpu_threads: 1
   trt_use_static: False
   save_output: True
+  return_res: True
+  print_res: True
 
 MODEL:
   - ClassificationOp:
