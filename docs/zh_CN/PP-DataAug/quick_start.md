@@ -49,7 +49,8 @@ pip install easy-data
 
 ```bash
 git clone https://github.com/PaddlePaddle/EasyData.git
-python3 setup.py install
+cd EasyData
+python setup.py install
 ```
 
 <a name="2"></a>
