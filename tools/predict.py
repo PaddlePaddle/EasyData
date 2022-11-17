@@ -14,6 +14,7 @@
 
 import os
 import sys
+
 __dir__ = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.abspath(os.path.join(__dir__, '../deploy/')))
 
@@ -23,10 +24,12 @@ from python.ppdataclean import PPDataClean
 from python.ppdataaug import PPDataAug
 from utils.utils import load_yaml
 
+
 def argsparser():
     parser = ArgsParser()
 
-    parser.add_argument("-c","--config",
+    parser.add_argument("-c",
+                        "--config",
                         type=str,
                         default=None,
                         help=("Path of configure"),
@@ -61,7 +64,7 @@ if __name__ == '__main__':
     args = argsparser()
     config_path = args.config
     yaml_data = load_yaml(config_path)
-    if "DataImprove" in yaml_data:
+    if "PPDataClean" in yaml_data:
         ppdataclean = PPDataClean(args)
         ppdataclean.run()
     elif "DataGen" in yaml_data:

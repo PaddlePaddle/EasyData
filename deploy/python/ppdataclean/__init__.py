@@ -20,13 +20,14 @@ from utils.utils import load_yaml
 
 
 class PPDataClean(object):
+
     def __init__(self, args):
         self.input = os.path.abspath(args.input)
         self.model_list = self.build_pipeline(args)
 
     def build_pipeline(self, args):
         config = load_yaml(args.config)
-        config.pop("DataImprove")
+        config.pop("PPDataClean")
         model_list = []
         for model in config.keys():
             pipeline_config_path = config[model]
