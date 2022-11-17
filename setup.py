@@ -15,10 +15,12 @@
 from io import open
 from setuptools import setup
 
+
 def get_requirements():
     with open('requirements.txt', encoding="utf-8-sig") as f:
         requirements = f.readlines()
     return requirements
+
 
 def get_readme():
     with open('./README.md', encoding="utf-8-sig") as f:
@@ -27,9 +29,12 @@ def get_readme():
 
 
 setup(
-    name='easydata',
+    name='easy-data',
     packages=['easydata', 'easydata.deploy'],
-    package_dir={'easydata': 'python_whl', 'easydata.deploy': 'deploy'},
+    package_dir={
+        'easydata': 'python_whl',
+        'easydata.deploy': 'deploy'
+    },
     include_package_data=True,
     entry_points={"console_scripts": ["easydata=easydata.easydata:main"]},
     version='0.0.0',
