@@ -78,7 +78,7 @@ def argsparser():
 
 
 def init_pipeline_config(**cfg):
-    # only support PPLDI now
+    # only support PP-DataClean now
     model_name = cfg["model"]
     base_cfg_path = f"./deploy/configs/ppcv/{model_name}.yaml"
     __dir__ = os.path.dirname(__file__)
@@ -155,7 +155,7 @@ def parse_args():
     )
     parser.add_argument("--print_res", type=str2bool, default=True)
 
-    # PPLDI args
+    # PP-DataClean args
     parser.add_argument(
         "--input",
         type=str,
