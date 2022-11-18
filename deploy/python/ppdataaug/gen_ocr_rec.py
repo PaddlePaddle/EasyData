@@ -146,6 +146,9 @@ class GenOCR(object):
                     bg_img_per_word_num,
                     img_save_folder,
                     delimiter="\t"):
+        if not os.path.exists(font_path) or not os.path.getsize(font_path):
+            print("error in loading font:{}".format(font_path))
+            sys.exit(-1)
         os.makedirs(img_save_folder, exist_ok=True)
         count = 0
         label_file = io.open(label_file, "w", encoding="utf-8")
