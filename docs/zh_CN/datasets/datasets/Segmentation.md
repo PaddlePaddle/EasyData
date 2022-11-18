@@ -4,6 +4,14 @@
 - [Pascal VOC 2012](#PascalVOC2012)
 - [Coco Stuff](#CocoStuff)
 - [ADE20K](#ADE20K)
+- [天空图像数据集](#天空图像数据集)
+- [CO-SKEL数据集](#CO-SKEL数据集)
+- [CAD-120affordance数据集](#CAD-120affordance数据集)
+- [Intrinsic_Images_in_the_Wild](#Intrinsic_Images_in_the_Wild)
+- [具有细长部分的鸟类昆虫数据集](#具有细长部分的鸟类昆虫数据集)
+- [多品种果花检测数据集](#多品种果花检测数据集)
+- [OpenSurfaces数据集](#OpenSurfaces数据集)
+- [阴影检测/纹理分析数据集](#阴影检测/纹理分析数据集)
 
 
 <a name="CityScapes"></a>
@@ -39,4 +47,87 @@
 - **下载地址**：https://paddleseg.bj.bcebos.com/dataset/ADEChallengeData2016.zip
 
 
+<a name="天空图像数据集"></a>
+## 5、天空图像数据集
+- **数据来源**：http://suo.nz/1ykW0L
+- **数据简介**：Sky 数据集包含 60 张带有地面实况的图像，用于天空分割。它基于 R. Fergus 15/02/03 的 Caltech Airplanes Side 数据集。选择数据集中包含天空区域的那些图像，并为它们创建地面实况。原始数据集图像名称保持不变。
+<div align="center">
+<img src="https://user-images.githubusercontent.com/59186797/202474154-3350bc12-7b02-49af-974b-79c9953c9511.jpg" width="400"><br>
+</div>
 
+- **下载地址**：http://suo.nz/1ykW0L
+
+<a name="CO-SKEL数据集"></a>
+## 6、CO-SKEL数据集
+- **数据来源**：http://suo.nz/1FR95s
+- **数据简介**：该数据集由分类骨架和分割掩码组成，用于评估协同骨架化方法。
+<div align="center">
+<img src="https://user-images.githubusercontent.com/59186797/202474719-f223ec75-5c0f-4400-b52c-89479bf45e79.jpg" width="400"><br>
+</div>
+
+- **下载地址**：http://suo.nz/1FR95s
+
+
+<a name="CAD-120affordance数据集"></a>
+## 7、CAD-120affordance数据集
+- **数据来源**：http://suo.nz/1NnlU1
+- **数据简介**：包含9916个对象实例的3090幅图像的逐像素注释。
+<div align="center">
+<img src="https://user-images.githubusercontent.com/59186797/202475296-0568a640-c354-4f16-b849-ccebc01755af.jpg" width="400"><br>
+</div>
+
+- **下载地址**：http://suo.nz/1NnlU1
+
+
+<a name="Intrinsic_Images_in_the_Wild"></a>
+## 8、Intrinsic_Images_in_the_Wild
+- **数据来源**：http://suo.nz/1UTwnq
+- **数据简介**：“Intrinsic Images in the Wild”，这是一个用于评估室内场景固有图像分解的大规模公共数据集。作者们通过数百万个众包注释创建了这个基准，这些注释对每个场景中的点对的材料属性进行了相对比较。
+<div align="center">
+<img src="https://user-images.githubusercontent.com/59186797/202476165-78193553-3935-45bf-9bf5-ce3400d9cb67.jpg" width="400"><br>
+</div>
+
+- **下载地址**：http://suo.nz/1UTwnq
+
+
+<a name="具有细长部分的鸟类昆虫数据集"></a>
+## 9、具有细长部分的鸟类昆虫数据集
+- **数据来源**：http://suo.nz/22pJs7
+- **数据简介**：这些数据库由 280 张具有ground truth的鸟类和昆虫的公共图像组成。
+<div align="center">
+<img src="https://user-images.githubusercontent.com/59186797/202476571-460fa3a2-1bbd-45b7-a700-34ec731132ba.jpg" width="400"><br>
+</div>
+
+- **下载地址**：http://suo.nz/22pJs7
+
+
+<a name="多品种果花检测数据集"></a>
+## 10、多品种果花检测数据集
+- **数据来源**：http://suo.nz/29RKnM
+- **数据简介**：该数据集包含四组花卉图像，来自三种不同的树种：苹果、桃和梨，以及随附的地面实况图像。
+<div align="center">
+<img src="https://user-images.githubusercontent.com/59186797/202477068-0783945e-3b49-45bd-9dfa-4fd69365fad5.jpg" width="400"><br>
+</div>
+
+- **下载地址**：http://suo.nz/29RKnM
+
+<a name="OpenSurfaces数据集"></a>
+## 11、OpenSurfaces数据集
+- **数据来源**：http://suo.nz/1bI3Md
+- **数据简介**：该数据集包含四组花卉图像，来自三种不同的树种：苹果、桃和梨，以及随附的地面实况图像。
+<div align="center">
+<img src="https://user-images.githubusercontent.com/59186797/202477464-d8bfa021-63d9-4859-bee9-00949605bbdb.jpg" width="400"><br>
+</div>
+
+- **下载地址**：http://suo.nz/1bI3Md
+
+
+<a name="阴影检测/纹理分析数据集"></a>
+## 12、阴影检测/纹理分析数据集
+- **数据来源**：http://suo.nz/1iyjoA
+- **数据简介**：一个用于阴影检测和纹理分析的简单计算机视觉数据集，专门用于帮助测试移动机器人的阴影检测算法（和纹理分割算法）——即使用 活动（移动）相机进行阴影检测。该数据集专注于纹理分析，因此每个图像序列都包含在许多不同纹理表面前移动的阴影。
+<div align="center">
+<img src="https://user-images.githubusercontent.com/59186797/202478005-86f5bc75-21fa-4ea7-a581-20955e4b2960.jpg" width="400"><br>
+</div>
+
+- **下载地址**：http://suo.nz/1iyjoA
