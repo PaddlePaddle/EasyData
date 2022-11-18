@@ -7,13 +7,11 @@ EasyData为大家搜集并整理了各个领域经典、前沿、产业的数据
 - ### [标注工具](#标注工具)
 
 
-具体如下：
-
 ### 数据集
 - 发布数据集覆盖CV、NLP、Speech等20+任务的125产业数据集，并针对开源产业数据集提供了便捷的下载脚本、读取API以及规范化格式方便开发者使用飞桨套件快速进行训练
-<table style="margin-left:auto;margin-right:auto;font-size:1.3vw;padding:3px 5px;text-align:center;vertical-align:center;">
+<table style="margin-left:auto;margin-right:auto;font-size:1.3vw;padding:5px 8px;text-align:center;vertical-align:center;">
   <tr>
-    <td colspan="5" style="font-weight:bold;">计算机视觉</td>
+    <td colspan="4" style="font-weight:bold;">计算机视觉</td>
   </tr>
   <tr>
     <td><a href="./datasets/Detection.md">目标检测</a>(9)</td>
@@ -33,7 +31,7 @@ EasyData为大家搜集并整理了各个领域经典、前沿、产业的数据
   
   </tr>
   <tr>
-    <td colspan="5" style="font-weight:bold;">自然语言处理</td>
+    <td colspan="4" style="font-weight:bold;">自然语言处理</td>
   </tr>
   <tr>
     <td><a href="./datasets/NLP.md">阅读理解</a> (7)</td>
@@ -52,7 +50,7 @@ EasyData为大家搜集并整理了各个领域经典、前沿、产业的数据
   </tr>
   
 <tr>
-    <td colspan="5" style="font-weight:bold;">语音</td>
+    <td colspan="4" style="font-weight:bold;">语音</td>
   </tr>
   <tr>
     <td><a href="./datasets/Speech.md">语音识别</a> (1)</td>
