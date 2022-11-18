@@ -7,11 +7,11 @@
 EasyData 旨在打造一套通用、领先且实用的数据自动扩充与数据清洗工具库，并提供开源数据集与标注工具大全，助力开发者获得高质量的训练、推理数据，从而提升 AI 算法的实用效果。
 
 
-|  <img src="https://user-images.githubusercontent.com/45199522/202378223-f7899f71-ae05-4f2a-b814-60707c013c1f.gif"  width = "600" height="100%" />                      | <img src="https://user-images.githubusercontent.com/59186797/202600222-a18e467d-5d93-41e1-80de-e3cac93c71fd.gif" width="800" height="100%"/> | 
+|  <img src="https://user-images.githubusercontent.com/45199522/202378223-f7899f71-ae05-4f2a-b814-60707c013c1f.gif"  width = "400" height="60%" />                      | <img src="https://user-images.githubusercontent.com/59186797/202600222-a18e467d-5d93-41e1-80de-e3cac93c71fd.gif" width="500" height="60%"/> | 
 | :----------------------------------------------------: | :-------------: | 
 | PP-DataClean 数据清洗效果图   | PP-DataAug 数据自动扩充效果图 |
 
-  <img src="https://user-images.githubusercontent.com/59186797/202604566-56083c28-a17c-4a60-ba6c-acfb1bdda2d7.gif"  width = "300" height = "60%" />                      | <img src="https://user-images.githubusercontent.com/59186797/202602413-00a7c51e-4e97-4f37-9fa0-febe6c2f69f3.gif" width="400" height = "60%"/> | 
+  <img src="https://user-images.githubusercontent.com/59186797/202604566-56083c28-a17c-4a60-ba6c-acfb1bdda2d7.gif"  width = "400" height = "60%" />                      | <img src="https://user-images.githubusercontent.com/59186797/202602413-00a7c51e-4e97-4f37-9fa0-febe6c2f69f3.gif" width="500" height = "60%"/> | 
 | :----------------------------------------------------: | :-------------: | 
 | 120+经典产业数据集   | 7+半自动标注工具 |
 
@@ -69,171 +69,44 @@ EasyData 旨在打造一套通用、领先且实用的数据自动扩充与数�
   - [快速体验](docs/zh_CN/PP-DataAug/quick_start.md)
   - [流程详解](docs/zh_CN/PP-DataAug/DataAug.md)
   
-- [开源数据集](docs/zh_CN/datasets/dataset.md)
-  <table style="margin-left:auto;margin-right:auto;font-size:1.3vw;padding:3px 5px;text-align:center;vertical-align:center;">
-  <tr>
-    <td colspan="5" style="font-weight:bold;">计算机视觉</td>
-  </tr>
-  <tr>
-    <td>目标检测(9)</td>
-    <td>图像分割(12)</td>
-    <td>图像分类(5)</td>
-    <td>视频理解(4)</td>
-   
-  <tr>
-    <td>文字识别(21)</td>
-    <td>关键点检测(6)</td>
-    <td>图像去噪(5)</td>
-     <td>3D感知(3)</td>
-    
-  </tr>
-  <tr>
+- [标注工具](docs/zh_CN/datasets/dataset.md)
+  - 计算机视觉
+    - [半自动标注工具PPOCRLabelv2](docs/zh_CN/datasets/Annotation_tool/PPOCRLabelv2.md)
+    - [交互式分割标注软件EISeg](docs/zh_CN/datasets/Annotation_tool/EISeg.md)
+    - [多功能标注工具PaddleLabel](docs/zh_CN/datasets/Annotation_tool/PaddleLabel.md)
+    - [交互式智能视频标注工具-EIVideo](docs/zh_CN/datasets/Annotation_tool/EIVideo.md)
+    - [Labelme](https://github.com/wkentaro/labelme)
+  - 自然语言处理
+    - [Doccano](docs/zh_CN/datasets/Annotation_tool/doccano.md)
+  - 语音
+    - [Praat](docs/zh_CN/datasets/Annotation_tool/Speech.md)
+    - [label-studio](docs/zh_CN/datasets/Annotation_tool/Speech.md)
+- [数据集](docs/zh_CN/datasets/dataset.md)
+  - 计算机视觉
+    - [目标检测](docs/zh_CN/datasets/datasets/Detection.md)
+    - [图像分割](docs/zh_CN/datasets/datasets/Segmentation.md)
+    - [图像分类](docs/zh_CN/datasets/datasets/Clas.md)
+    - [视频理解](docs/zh_CN/datasets/datasets/Video.md)
+    - [文字识别](docs/zh_CN/datasets/datasets/OCR.md)
+    - [关键点检测](docs/zh_CN/datasets/datasets/Keypoints.md)
+    - [图像去噪](docs/zh_CN/datasets/datasets/Image_Denoising.md)
+    - [3D感知](docs/zh_CN/datasets/datasets/3D.md)
 
-  
-  </tr>
-  <tr>
-    <td colspan="5" style="font-weight:bold;">自然语言处理</td>
-  </tr>
-  <tr>
-    <td>阅读理解(7)</td>
-    <td>文本分类(33)</td>
-    <td>文本匹配(1)</td>
-    <td>序列标注(3)</td>
-    <td></td>
-  </tr>
-  
-  <tr>
-    <td>机器翻译(2)</td>
-    <td>对话系统(1)</td>
-    <td>文本生成(6)</td>
-    <td>语料库(2)</td>
-    <td></td>
-  </tr>
-  
-<tr>
-    <td colspan="5" style="font-weight:bold;">语音</td>
-  </tr>
-  <tr>
-    <td>语音识别(1)</td>
-    <td>语音合成(1)</td>
-    <td>声音分类(1)</td>
-    <td>>声纹识别(1)</td>
-  </tr>
-    <tr>
-    <td>语音唤醒(1)</td>
-  </tr>
-
-</table>
-
-- [数据标注工具大全](docs/zh_CN/datasets/dataset.md)
-<table style="margin-left:auto;margin-right:auto;font-size:1.3vw;padding:3px 5px;text-align:center;vertical-align:center;">
-  <tr>
-    <td colspan="5" style="font-weight:bold;">计算机视觉</td>
-  </tr>
-  <tr>
-    <td>标注工具/任务</td>
-    <td>图像分割</td>
-    <td>图像分类</td>
-    <td>目标检测</td>
-    <td>文字识别</td>
-    <td>视频理解</td>
-    <td>NLP</td>
-    <td>语音 </td>
-    
-   
-  <tr>
-    <td>半自动标注工具PPOCRLabelv2</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>支持</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    
-  </tr>
- 
-
-  <tr>
-    <td>交互式分割标注软件EISeg</td>
-    <td>支持</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    
-  </tr> 
-   <tr>
-    <td>多功能标注工具PaddleLabel</td>
-    <td>支持</td>
-    <td>支持</td>
-    <td>支持</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    
-  </tr> 
- <tr>
-    <td>交互式智能视频标注工具-EIVideo</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>支持</td>
-    <td></td>
-    <td></td>
-    
-  </tr> 
- <tr>
-    <td>Labelme</td>
-    <td>支持</td>
-    <td>支持</td>
-    <td>支持</td>
-    <td>支持</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    
-  </tr> 
- <tr>
-    <td>Doccano</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>支持</td>
-    <td></td>
-    
-  </tr> 
- <tr>
-    <td>Praat</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>支持</td>
-    
-  </tr> 
- <tr>
-    <td>label-studio</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>支持</td>
-    <td>支持</td>
-   
-    
-  </tr> 
-
-</table>
+  - 自然语言处理
+    - [阅读理解](docs/zh_CN/datasets/datasets/NLP.md)
+    - [文本分类](docs/zh_CN/datasets/datasets/NLP.md)
+    - [文本匹配](docs/zh_CN/datasets/datasets/NLP.md)
+    - [序列标注](docs/zh_CN/datasets/datasets/NLP.md)
+    - [机器翻译](docs/zh_CN/datasets/datasets/NLP.md)
+    - [对话系统](docs/zh_CN/datasets/datasets/NLP.md)
+    - [文本生成](docs/zh_CN/datasets/datasets/NLP.md)
+    - [语料库](docs/zh_CN/datasets/datasets/NLP.md)
+  - 语音
+    - [语音识别](docs/zh_CN/datasets/datasets/Speech.md)
+    - [语音合成](docs/zh_CN/datasets/datasets/Speech.md)
+    - [声音分类](docs/zh_CN/datasets/datasets/Speech.md)
+    - [声纹识别](docs/zh_CN/datasets/datasets/Speech.md)
+    - [语音唤醒](docs/zh_CN/datasets/datasets/Speech.md)
 - 许可证书
 
 
