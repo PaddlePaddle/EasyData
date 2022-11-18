@@ -257,12 +257,12 @@ BigModel:
 ## 5.1 PP-DataAug实验效果
 为了验证 PP-DataAug 离线增广数据的效果，在上述不同的场景下进行分别验证，包含文本识别、图像分类、识图任务、广告码图像过滤场景。为了消除数据量变化带来的影响，保证增广后的数据量和baseline数据量相同，会将原始数据进行复制作为baseline，具体实验结果如下表：
 
-| 实验任务 | 模型 | 配置文件 | baseline精度 | 增广后精度 |
-| :--: | :--: | :--: |:--: |:------: |
-|  文本识别    | ch_PP-OCRv3_rec | [ch_PP-OCRv3_rec.yml](https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.6/configs/rec/PP-OCRv3/ch_PP-OCRv3_rec.yml)  | 72.95%   |   74.15% (+1.20%)  |
-|  图像分类    | PP-LCNet        | [PPLCNet_x1_0.yaml](https://github.com/PaddlePaddle/PaddleClas/blob/release/2.5/ppcls/configs/ImageNet/PPLCNet/PPLCNet_x1_0.yaml) | 78.23%   |   80.03% (+1.80%)  |
-|  图像分类    | PP-HGNet        | [PPHGNet_small.yaml](https://github.com/PaddlePaddle/PaddleClas/blob/release/2.5/ppcls/configs/ImageNet/PPHGNet/PPHGNet_small.yaml) |   90.80%   |   91.33% (+0.53%)  |
-|  识图任务    | PP-LCNetv2      | [GeneralRecognitionV2_PPLCNetV2_base.yaml](https://github.com/PaddlePaddle/PaddleClas/blob/release/2.5/ppcls/configs/GeneralRecognitionV2/GeneralRecognitionV2_PPLCNetV2_base.yaml) | 66.80%   |   67.70% (+0.90%)  |
-| 广告码图像过滤| PP-LCNet        | [PPLCNet_x1_0.yaml](https://github.com/PaddlePaddle/PaddleClas/blob/develop/ppcls/configs/PULC/code_exists/PPLCNet_x1_0.yaml) |   94.40%   |   95.73% (+1.33%)  |
+| 实验任务 | 模型 | 配置文件 | baseline精度 | 迭代轮数\*2精度 | 增广后精度 |
+| :--: | :--: | :--: |:--: |:--: |:------: |
+|  文本识别    | ch_PP-OCRv3_rec | [ch_PP-OCRv3_rec.yml](https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.6/configs/rec/PP-OCRv3/ch_PP-OCRv3_rec.yml)  | 71.39% | 72.95% (+1.64%)  |   74.15% (+2.76%)  |
+|  图像分类    | PP-LCNet        | [PPLCNet_x1_0.yaml](https://github.com/PaddlePaddle/PaddleClas/blob/release/2.5/ppcls/configs/ImageNet/PPLCNet/PPLCNet_x1_0.yaml) | 75.40% | 78.23%(2.83%)   |   80.03% (+4.60%)  |
+|  图像分类    | PP-HGNet        | [PPHGNet_small.yaml](https://github.com/PaddlePaddle/PaddleClas/blob/release/2.5/ppcls/configs/ImageNet/PPHGNet/PPHGNet_small.yaml) |  90.8% |  90.80%(--)   |   91.33% (+0.53%)  |
+|  识图任务    | PP-LCNetv2      | [GeneralRecognitionV2_PPLCNetV2_base.yaml](https://github.com/PaddlePaddle/PaddleClas/blob/release/2.5/ppcls/configs/GeneralRecognitionV2/GeneralRecognitionV2_PPLCNetV2_base.yaml) | 65.5% | 66.80% (+1.3%)  |   67.70% (+2.2%)  |
+| 广告码图像过滤| PP-LCNet        | [PPLCNet_x1_0.yaml](https://github.com/PaddlePaddle/PaddleClas/blob/develop/ppcls/configs/PULC/code_exists/PPLCNet_x1_0.yaml) |   94.40% | 95.25%(+0.85)  |   95.73% (+1.33%)  |
 
 可以看出，使用 PP-DataAug 工具对数据进行增广后在不同场景中都有不同程度的效果提升。
