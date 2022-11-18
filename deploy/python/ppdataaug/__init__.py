@@ -142,11 +142,12 @@ class PPDataAug(object):
             concat_file(label_dir=self.output_dir, all_file=self.gen_label)
 
         else:
+            one_aug_num = int(self.gen_num / len(self.aug_type)+0.5)
             with open(self.gen_label, "w", encoding="utf-8") as f:
                 for aug_type in self.aug_type:
                     self.config["DataGen"]["aug"] = aug_type
                     dataaug = GenAug(self.config)
-                    dataaug(gen_num=self.gen_num, trans_label=f)
+                    dataaug(gen_num=one_aug_num, trans_label=f)
 
         assert os.path.getsize(
             self.gen_label

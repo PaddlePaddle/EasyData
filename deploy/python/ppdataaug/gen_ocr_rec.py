@@ -149,9 +149,10 @@ class GenOCR(object):
         os.makedirs(img_save_folder, exist_ok=True)
         count = 0
         label_file = io.open(label_file, "w", encoding="utf-8")
+        if len(word_list) * bg_img_per_word_num < all_count:
+            bg_img_per_word_num = all_count
         for word in word_list:
             bg_list = select_bg(bg_img_dir, bg_img_per_word_num)
-
             cur_thread_img_save_folder = '{}/{}'.format(
                 img_save_folder, save_number)
             os.makedirs(cur_thread_img_save_folder, exist_ok=True)

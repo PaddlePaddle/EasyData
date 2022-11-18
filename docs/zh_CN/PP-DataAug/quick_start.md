@@ -228,8 +228,8 @@ ppdataaug.predict()
 | gen_label | 数据生成 | 增广后的数据标签 | labels/test.txt |
 | img_save_folder | 数据生成 | 增广图像存储目录 | test |
 | size | 数据生成 | 输出图像尺寸 | 224 |
-| gen_num | 数据生成 | 每类增广数量 | 10 |
-| gen_ratio | 数据生成 | 每类增广倍数，优先级低于gen_num；如果gen_num大于原始数据量，该参数生效 | 0 |
+| gen_num | 数据生成 | 生成的总数据量 | 10 |
+| gen_ratio | 数据生成 | 生成总数据量与原数据量比例，优先级高于gen_num| 0 |
 | ops | 数据生成 | 增广op | "randaugment", "random_erasing", "gridmask", "tia_distort", "tia_stretch", "tia_perspective" |
 | bg_num_per_word | 数据生成 | 每条OCR语料选择几张背景图 | 5 |
 | bg_img_dir | 数据生成 | 文本图像生成背景图目录 | demo/ocr_rec/bg |
