@@ -167,10 +167,10 @@ easydata --model ppdataaug --ori_data_dir demo/ocr_data/ --label_file demo/ocr_d
 
 - text2img
 
-输入文本数据，生成图像数据，需提供语料路径、字体路径、背景图路径:
+输入文本数据，生成图像数据，需提供语料路径、背景图路径，如需指定其他字体，可以添加参数`--font_dir {path to font}`:
 
 ```bash
-easydata --model ppdataaug --bg_img_dir demo/ocr_rec/bg --font_dir demo/ocr_rec/font --corpus_file demo/ocr_rec/corpus.txt --gen_mode text2img --model_type ocr_rec
+easydata --model ppdataaug --bg_img_dir demo/ocr_rec/bg --corpus_file demo/ocr_rec/corpus.txt --gen_mode text2img --model_type ocr_rec
 ```
 
 运行该命令后，会输出生成的图像和标签文件，输出图像默认在test目录下，如下所示：
