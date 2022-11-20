@@ -23,7 +23,7 @@ def get_requirements():
 
 
 setup(
-    name='easy-data',
+    name='easydata-python',
     packages=['easydata', 'easydata.deploy'],
     package_dir={
         'easydata': 'python_whl',
