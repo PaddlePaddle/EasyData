@@ -38,7 +38,6 @@ EasyData为大家搜集并整理了各个领域经典、前沿、产业的数据
     <td><a href="./datasets/NLP.md">文本分类</a> (33)</td>
     <td><a href="./datasets/NLP.md">文本匹配</a> (1)</td>
     <td><a href="./datasets/NLP.md">序列标注</a> (3)</td>
-    <td></td>
   </tr>
   
   <tr>
@@ -46,7 +45,6 @@ EasyData为大家搜集并整理了各个领域经典、前沿、产业的数据
     <td><a href="./datasets/NLP.md">对话系统</a> (1)</td>
     <td><a href="./datasets/NLP.md">文本生成</a> (6)</td>
     <td><a href="./datasets/NLP.md">语料库</a> (2)</td>
-    <td></td>
   </tr>
   
 <tr>
