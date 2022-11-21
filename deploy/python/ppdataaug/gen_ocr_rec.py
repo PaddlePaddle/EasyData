@@ -162,7 +162,7 @@ class GenOCR(object):
                     bg_img_per_word_num,
                     img_save_folder,
                     delimiter="\t"):
-        if not os.path.exists(font_path) or not os.path.getsize(font_path):
+        if not os.path.exists(font_path) or len(os.listdir(font_path)) < 0:
             print("error in loading font:{}".format(font_path))
             sys.exit(-1)
         os.makedirs(img_save_folder, exist_ok=True)
