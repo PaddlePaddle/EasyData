@@ -107,9 +107,9 @@ def get_demo_path(path):
     path, _ = get_path(url, DEMO_HOME)
 
     with tarfile.open(path, 'r') as tarObj:
-        dir_path = os.path.dirname(path)
+        dir_path = osp.dirname(path)
         tarObj.extractall(path=dir_path)
-    font_path = os.path.splitext(path)[0]
+    font_path = osp.abspath(os.path.splitext(path)[0])
     return font_path
 
 
