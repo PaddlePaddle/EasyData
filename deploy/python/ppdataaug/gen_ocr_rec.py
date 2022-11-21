@@ -1,15 +1,32 @@
 # coding: utf-8
+
+# Copyright (c) 2022 PaddlePaddle Authors. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import sys
 import io
-from multiprocessing import Pool
+import os
 import glob
 import random
-from PIL import ImageFont, Image, ImageDraw
 import numpy as np
 import cv2
-import matplotlib.pyplot as plt
 import time
 import yaml
-import os
+from multiprocessing import Pool
+from PIL import ImageFont, Image, ImageDraw
+import matplotlib.pyplot as plt
+
 from .utils.data_utils import GeneratorEnqueuer
 from .utils.renderer import Renderer
 
@@ -94,7 +111,6 @@ def load_config(file_path):
 
 
 def select_bg(bg_dir, number):
-    filenames = os.listdir(bg_dir)
     samples = []
     num = max(1, int(number))
     pathDir = glob.glob('{}/**.*'.format(bg_dir))
@@ -160,7 +176,6 @@ class GenOCR(object):
                 img_save_folder, save_number)
             os.makedirs(cur_thread_img_save_folder, exist_ok=True)
             for bg_path in bg_list:
-                start_time = time.time()
                 font_list = random.sample(os.listdir(font_path), 1)
                 try:
                     out, word = self.reader.gen_img_list(
