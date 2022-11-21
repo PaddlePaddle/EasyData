@@ -49,7 +49,7 @@
 直接通过 pip 工具从 PyPi 等源进行安装，命令如下：
 
 ```bash
-pip install easy-data
+pip install easydata-python
 ```
 
 <a name="122"></a>

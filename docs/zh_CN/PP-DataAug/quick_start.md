@@ -42,7 +42,7 @@
 pip安装
 
 ```bash
-pip install easy-data
+pip install easydata-python
 ```
 
 本地构建并安装
