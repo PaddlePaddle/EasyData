@@ -205,6 +205,9 @@ class PPDA(PPDataAug):
         args.__dict__.update(**kwargs)
         self.save_list = []
         model_config = PPDA_CONFIG[args.gen_mode]['config']
+        __dir__ = os.path.dirname(__file__)
+        model_config = os.path.join(__dir__, model_config)
+
         if args.model_type == "ocr_rec":
             args.delimiter = "\t"
         self.config = config.get_config(model_config, show=False)
@@ -231,6 +234,8 @@ class PPDA(PPDataAug):
         self.compare_out = args.compare_out
         self.feature_thresh = args.repeat_ratio
 
+        self.config["FeatureExtract"]["config"] = os.path.join(
+            __dir__, self.config["FeatureExtract"]["config"])
         self.config["FeatureExtract"]["thresh"] = args.repeat_ratio
         self.config["IndexProcess"]["all_label_file"] = args.gen_label
         self.config["IndexProcess"]["image_root"] = args.out_dir
@@ -242,6 +247,8 @@ class PPDA(PPDataAug):
             self.config.pop("BigModel")
             self.compare_out = args.final_label
         else:
+            self.config["BigModel"]["config"] = os.path.join(
+                __dir__, self.config["BigModel"]["config"])
             self.config["BigModel"]["thresh"] = args.quality_ratio
             self.config["BigModel"]["final_label"] = args.final_label
             self.big_model_out = args.final_label
