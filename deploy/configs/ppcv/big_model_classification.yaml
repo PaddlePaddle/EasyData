@@ -34,7 +34,7 @@ MODEL:
       PostProcess:
         - Topk:
             topk: 1
-            class_id_map_file: tests/imagenet1k_label_list.txt
+            class_id_map_file: "paddlecv://dict/classification/imagenet1k_label_list.txt"
       Inputs:
         - image
 
