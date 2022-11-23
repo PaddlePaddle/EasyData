@@ -195,7 +195,7 @@ def parse_args():
                         type=str,
                         default="high_socre_label.txt")
     parser.add_argument("--model_type", type=str, default="cls")
-    return parser.parse_args()
+    return parser.parse_known_args()[0]
 
 
 class PPDA(PPDataAug):
