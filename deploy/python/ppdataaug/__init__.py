@@ -147,7 +147,7 @@ class PPDataAug(object):
                 for aug_type in self.aug_type:
                     self.config["DataGen"]["aug"] = aug_type
                     dataaug = GenAug(self.config)
-                    dataaug(gen_num=one_aug_num, trans_label=f)
+                    dataaug(gen_num=one_aug_num, gen_ratio=self.gen_ratio, trans_label=f)
 
         assert os.path.getsize(
             self.gen_label
