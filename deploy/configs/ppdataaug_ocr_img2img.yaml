@@ -18,7 +18,7 @@ DataGen:
 
 FeatureExtract:
   config: "deploy/configs/ppcv/feature_extract.yaml"
-  thresh: 0.5
+  thresh: 0.9
   file_out: "tmp/rm_repeat.txt"
 
   # indexing engine config

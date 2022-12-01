@@ -14,7 +14,7 @@ DataGen:
 
 FeatureExtract:
   config: "deploy/configs/ppcv/feature_extract.yaml"
-  thresh: 0.5
+  thresh: 0.9
   file_out: "tmp/rm_repeat.txt"
 
   # indexing engine config
@@ -35,5 +35,5 @@ BigModel:
   model_type: ocr_rec  # support(cls / ocr_rec)
   config: "deploy/configs/ppcv/text_recognition.yaml"
   batch_size: 8
-  thresh: 0.2
+  thresh: 0.1
   final_label: "high_socre_label.txt"
