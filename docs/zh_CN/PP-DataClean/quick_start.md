@@ -73,13 +73,7 @@ python setup.py install
 <a name="21"></a>
 ### 2.1 命令行使用
 
-EasyData 提供了测试图片用于验证，点击[这里](https://paddleclas.bj.bcebos.com/data/PULC/easydata_demo_imgs.tar)下载并解压，然后在终端中切换到相应目录：
-
-```
-cd ./easydata_demo_imgs/
-```
-
-如果不使用提供的测试图片，可以将下方`--input`参数替换为相应的测试图片路径。
+EasyData 提供了测试图片用于验证，测试图片存放于`demo/`中。如果不使用提供的测试图片，可以将下方`--input`参数替换为相应的测试图片路径。
 
 <a name="211"></a>
 
@@ -88,13 +82,13 @@ cd ./easydata_demo_imgs/
 EasyData 提供了图像方向矫正模型，通过下方代码即可快速体验，其中参数 `--model image_orientation` 指定了所使用的模型；参数 `--input ./image_orientation/1.jpg` 指定了待预测图像文件路径；参数 `--device cpu` 指定了使用 CPU 进行预测，同样可以通过 `--device gpu` 指定使用 GPU 进行预测。
 
 ```bash
-easydata --model image_orientation --input ./image_orientation/1.jpg --device cpu
+easydata --model image_orientation --input ./demo/image_orientation/1.jpg --device cpu
 ```
 
 预测结果以 dict 格式输出，预测结果包含了预测图像文件路径、分类结果、score 和分类结果对应的标签：
 
 ```bash
-{'filename': '/paddle/data/easydata_demo_imgs/image_orientation/1.jpg', 'class_ids': 1, 'scores': 0.9346007, 'label_names': '90°'}
+{'filename': './demo/image_orientation/1.jpg', 'class_ids': 1, 'scores': 0.93460065, 'label_names': '90°'}
 ```
 
 预测结果中，类别 id 与分类标签的映射关系如下：
@@ -107,31 +101,31 @@ easydata --model image_orientation --input ./image_orientation/1.jpg --device cp
 另外，EasyData 同样支持对多张图像进行预测，仅需通过参数 `--input` 指定包含预测图像的目录即可：
 
 ```bash
-easydata --model image_orientation --input ./image_orientation/ --device cpu
+easydata --model image_orientation --input ./demo/image_orientation/ --device cpu
 ```
 
 此时，会将每个图像的预测结果依次打印：
 
 ```bash
-{'filename': '/paddle/data/easydata_demo_imgs/image_orientation/2.jpg', 'class_ids': 2, 'scores': 0.9217471, 'label_names': '180°'}
-{'filename': '/paddle/data/easydata_demo_imgs/image_orientation/3.jpg', 'class_ids': 3, 'scores': 0.9218502, 'label_names': '270°'}
-{'filename': '/paddle/data/easydata_demo_imgs/image_orientation/1.jpg', 'class_ids': 1, 'scores': 0.9346007, 'label_names': '90°'}
-{'filename': '/paddle/data/easydata_demo_imgs/image_orientation/0.jpg', 'class_ids': 0, 'scores': 0.9267141, 'label_names': '0°'}
+{'filename': '/paddle/data/EasyData/demo/image_orientation/1.jpg', 'class_ids': 1, 'scores': 0.93460053, 'label_names': '90°'}
+{'filename': '/paddle/data/EasyData/demo/image_orientation/2.jpg', 'class_ids': 2, 'scores': 0.92174697, 'label_names': '180°'}
+{'filename': '/paddle/data/EasyData/demo/image_orientation/0.jpg', 'class_ids': 0, 'scores': 0.92671436, 'label_names': '0°'}
+{'filename': '/paddle/data/EasyData/demo/image_orientation/3.jpg', 'class_ids': 3, 'scores': 0.9218502, 'label_names': '270°'}
 ```
 
 对于图像方向矫正模型，还可以通过参数 `--thresh` 设置 score 的阈值。设置阈值则意味着，当 top1 score > thresh 时，预测值为 top1 对应类别，否则预测值为默认类别 0，即表示 0°。而阈值默认值为0，表示以 top1 score 结果作为预测值。如将阈值设置为 0.93，命令如下所示：
 
 ```bash
-easydata --model image_orientation --input ./image_orientation/ --device cpu --thresh 0.93
+easydata --model image_orientation --input ./demo/image_orientation/ --device cpu --thresh 0.93
 ```
 
 上述命令的运行结果如下所示：
 
 ```bash
-{'filename': '/paddle/data/easydata_demo_imgs/image_orientation/3.jpg', 'class_ids': 0, 'scores': 0.023812257, 'label_names': '0°'}
-{'filename': '/paddle/data/easydata_demo_imgs/image_orientation/2.jpg', 'class_ids': 0, 'scores': 0.02494335, 'label_names': '0°'}
-{'filename': '/paddle/data/easydata_demo_imgs/image_orientation/0.jpg', 'class_ids': 0, 'scores': 0.92671424, 'label_names': '0°'}
-{'filename': '/paddle/data/easydata_demo_imgs/image_orientation/1.jpg', 'class_ids': 1, 'scores': 0.93460053, 'label_names': '90°'}
+{'filename': '/paddle/data/EasyData/demo/image_orientation/0.jpg', 'class_ids': 0, 'scores': 0.92671436, 'label_names': '0°'}
+{'filename': '/paddle/data/EasyData/demo/image_orientation/1.jpg', 'class_ids': 1, 'scores': 0.93460053, 'label_names': '90°'}
+{'filename': '/paddle/data/EasyData/demo/image_orientation/3.jpg', 'class_ids': 0, 'scores': 0.023812268, 'label_names': '0°'}
+{'filename': '/paddle/data/EasyData/demo/image_orientation/2.jpg', 'class_ids': 0, 'scores': 0.02494335, 'label_names': '0°'}
 ```
 
 <a name="212"></a>
@@ -141,14 +135,14 @@ easydata --model image_orientation --input ./image_orientation/ --device cpu --t
 EasyData 提供了模糊图像过滤模型，通过下方代码即可快速体验：
 
 ``` bash
-easydata --model clarity_assessment --input ./clarity_assessment/ --device cpu
+easydata --model clarity_assessment --input ./demo/clarity_assessment/ --device cpu
 ```
 
 上述命令的预测结果如下所示：
 
 ```text
-{'filename': '/paddle/data/easydata_demo_imgs/clarity_assessment/clarity_demo.jpg', 'class_ids': [0], 'scores': [0.89864], 'label_names': ['clarity']}
-{'filename': '/paddle/data/easydata_demo_imgs/clarity_assessment/blured_demo.jpg', 'class_ids': [1], 'scores': [0.97749], 'label_names': ['blured']}
+{'filename': '/paddle/data/EasyData/demo/clarity_assessment/blured_demo.jpg', 'class_ids': [1], 'scores': [0.97749], 'label_names': ['blured']}
+{'filename': '/paddle/data/EasyData/demo/clarity_assessment/clarity_demo.jpg', 'class_ids': [0], 'scores': [0.89864], 'label_names': ['clarity']}
 ```
 
 预测结果中，类别 id 与分类标签的映射关系如下：
@@ -163,14 +157,14 @@ easydata --model clarity_assessment --input ./clarity_assessment/ --device cpu
 EasyData 提供了二维码图像过滤模型，支持识别图像中是否包含二维码，通过下方代码即可快速体验：
 
 ``` bash
-easydata --model code_exists --input ./code_exists/ --device cpu
+easydata --model code_exists --input ./demo/code_exists/ --device cpu
 ```
 
 上述命令的预测结果如下所示：
 
 ```text
-{'filename': '/paddle/data/easydata_demo_imgs/code_exists/no_code_demo.jpg', 'class_ids': [0], 'scores': [0.996], 'label_names': ['no code']}
-{'filename': '/paddle/data/easydata_demo_imgs/code_exists/contains_code_demo.jpg', 'class_ids': [1], 'scores': [1.0], 'label_names': ['contains code']}
+{'filename': '/paddle/data/EasyData/demo/code_exists/contains_code_demo.jpg', 'class_ids': [1], 'scores': [1.0], 'label_names': ['contains code']}
+{'filename': '/paddle/data/EasyData/demo/code_exists/no_code_demo.jpg', 'class_ids': [0], 'scores': [0.996], 'label_names': ['no code']}
 ```
 
 预测结果中，类别 id 与分类标签的映射关系如下：
@@ -189,14 +183,14 @@ EasyData 同样可以通过 whl 包的形式集成到 Python 脚本中。在 Pyt
 ```python
 from easydata import EasyData
 model = EasyData(model="image_orientation", device="cpu", return_res=True, print_res=False)
-results = model.predict("./image_orientation/")
+results = model.predict("./demo/image_orientation/")
 print(results)
 ```
 
 结果是一个list，其中元素为 dict 类型，包含了预测图像文件路径、预测结果id、score 和预测类别名：
 
 ```bash
-[{'filename': '/paddle/data/easydata_demo_imgs/image_orientation/2.jpg', 'class_ids': 2, 'scores': 0.92174697, 'label_names': '180°'}, {'filename': '/paddle/data/easydata_demo_imgs/image_orientation/3.jpg', 'class_ids': 3, 'scores': 0.9218502, 'label_names': '270°'}, {'filename': '/paddle/data/easydata_demo_imgs/image_orientation/1.jpg', 'class_ids': 1, 'scores': 0.93460053, 'label_names': '90°'}, {'filename': '/paddle/data/easydata_demo_imgs/image_orientation/0.jpg', 'class_ids': 0, 'scores': 0.92671424, 'label_names': '0°'}]
+[{'filename': '/paddle/data/EasyData/demo/image_orientation/0.jpg', 'class_ids': 0, 'scores': 0.92671436, 'label_names': '0°'}, {'filename': '/paddle/data/EasyData/demo/image_orientation/3.jpg', 'class_ids': 3, 'scores': 0.9218502, 'label_names': '270°'}, {'filename': '/paddle/data/EasyData/demo/image_orientation/1.jpg', 'class_ids': 1, 'scores': 0.93460053, 'label_names': '90°'}, {'filename': '/paddle/data/EasyData/demo/image_orientation/2.jpg', 'class_ids': 2, 'scores': 0.92174697, 'label_names': '180°'}]
 ```
 
 如上例所示，在实例化 EasyData 对象时，相关参数说明如下：
