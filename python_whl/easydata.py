@@ -191,7 +191,7 @@ def parse_args():
 
     # BigModel args
     parser.add_argument("--use_big_model", type=str2bool, default=True)
-    parser.add_argument("--quality_ratio", type=float, default=0.4)
+    parser.add_argument("--quality_ratio", type=float, default=0.1)
     parser.add_argument("--final_label",
                         type=str,
                         default="high_socre_label.txt")
