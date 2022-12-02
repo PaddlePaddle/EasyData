@@ -7,7 +7,7 @@ from random import sample
 from tqdm import tqdm
 import traceback
 
-from python.ppdataaug.utils import logger
+from python.dataaug.utils import logger
 from .data.preprocess import transform
 from .data.preprocess.ops.operators import DecodeImage, ResizeImage
 from .data.preprocess.ops.randaugment import RandAugment

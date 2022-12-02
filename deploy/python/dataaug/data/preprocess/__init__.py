@@ -12,33 +12,33 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from python.ppdataaug.data.preprocess.ops.autoaugment import ImageNetPolicy as RawImageNetPolicy
-from python.ppdataaug.data.preprocess.ops.randaugment import RandAugment as RawRandAugment
-from python.ppdataaug.data.preprocess.ops.timm_autoaugment import RawTimmAutoAugment
-from python.ppdataaug.data.preprocess.ops.cutout import Cutout
+from python.dataaug.data.preprocess.ops.autoaugment import ImageNetPolicy as RawImageNetPolicy
+from python.dataaug.data.preprocess.ops.randaugment import RandAugment as RawRandAugment
+from python.dataaug.data.preprocess.ops.timm_autoaugment import RawTimmAutoAugment
+from python.dataaug.data.preprocess.ops.cutout import Cutout
 
-from python.ppdataaug.data.preprocess.ops.hide_and_seek import HideAndSeek
-from python.ppdataaug.data.preprocess.ops.random_erasing import RandomErasing
-from python.ppdataaug.data.preprocess.ops.grid import GridMask
+from python.dataaug.data.preprocess.ops.hide_and_seek import HideAndSeek
+from python.dataaug.data.preprocess.ops.random_erasing import RandomErasing
+from python.dataaug.data.preprocess.ops.grid import GridMask
 
-from python.ppdataaug.data.preprocess.ops.operators import DecodeImage
-from python.ppdataaug.data.preprocess.ops.operators import ResizeImage
-from python.ppdataaug.data.preprocess.ops.operators import CropImage
-from python.ppdataaug.data.preprocess.ops.operators import RandCropImage
-from python.ppdataaug.data.preprocess.ops.operators import RandCropImageV2
-from python.ppdataaug.data.preprocess.ops.operators import RandFlipImage
-from python.ppdataaug.data.preprocess.ops.operators import NormalizeImage
-from python.ppdataaug.data.preprocess.ops.operators import ToCHWImage
-from python.ppdataaug.data.preprocess.ops.operators import AugMix
-from python.ppdataaug.data.preprocess.ops.operators import Pad
-from python.ppdataaug.data.preprocess.ops.operators import ToTensor
-from python.ppdataaug.data.preprocess.ops.operators import Normalize
-from python.ppdataaug.data.preprocess.ops.operators import RandomHorizontalFlip
-from python.ppdataaug.data.preprocess.ops.operators import CropWithPadding
-from python.ppdataaug.data.preprocess.ops.operators import RandomInterpolationAugment
-from python.ppdataaug.data.preprocess.ops.operators import ColorJitter
-from python.ppdataaug.data.preprocess.ops.operators import RandomCropImage
-from python.ppdataaug.data.preprocess.ops.operators import Padv2
+from python.dataaug.data.preprocess.ops.operators import DecodeImage
+from python.dataaug.data.preprocess.ops.operators import ResizeImage
+from python.dataaug.data.preprocess.ops.operators import CropImage
+from python.dataaug.data.preprocess.ops.operators import RandCropImage
+from python.dataaug.data.preprocess.ops.operators import RandCropImageV2
+from python.dataaug.data.preprocess.ops.operators import RandFlipImage
+from python.dataaug.data.preprocess.ops.operators import NormalizeImage
+from python.dataaug.data.preprocess.ops.operators import ToCHWImage
+from python.dataaug.data.preprocess.ops.operators import AugMix
+from python.dataaug.data.preprocess.ops.operators import Pad
+from python.dataaug.data.preprocess.ops.operators import ToTensor
+from python.dataaug.data.preprocess.ops.operators import Normalize
+from python.dataaug.data.preprocess.ops.operators import RandomHorizontalFlip
+from python.dataaug.data.preprocess.ops.operators import CropWithPadding
+from python.dataaug.data.preprocess.ops.operators import RandomInterpolationAugment
+from python.dataaug.data.preprocess.ops.operators import ColorJitter
+from python.dataaug.data.preprocess.ops.operators import RandomCropImage
+from python.dataaug.data.preprocess.ops.operators import Padv2
 
 import numpy as np
 from PIL import Image

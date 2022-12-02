@@ -29,7 +29,7 @@ from paddle.vision.transforms import ToTensor, Normalize, RandomHorizontalFlip, 
 from paddle.vision.transforms import functional as F
 from .autoaugment import ImageNetPolicy
 from .functional import augmentations
-from python.ppdataaug.utils import logger
+from python.dataaug.utils import logger
 
 
 class UnifiedResize(object):

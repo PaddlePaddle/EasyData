@@ -43,7 +43,7 @@ setup(
     download_url='https://github.com/PaddlePaddle/EasyData.git',
     keywords=[
         'PaddlePaddle',
-        'PP-DataAug',
+        'DataAug',
         'PP-DataClean',
     ],
     classifiers=[

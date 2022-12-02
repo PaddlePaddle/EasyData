@@ -17,7 +17,7 @@ import sys
 parent = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.abspath(os.path.join(parent, '../deploy/')))
 
-from python.ppdataaug.utils import logger
+from python.dataaug.utils import logger
 
 
 def get_label(data_file, delimiter=" "):
