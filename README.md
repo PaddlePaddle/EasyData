@@ -7,12 +7,12 @@
 EasyData 旨在打造一套通用、领先且实用的数据自动扩充与数据清洗工具库，并提供开源数据集与标注工具大全，助力开发者获得高质量的训练、推理数据，从而提升 AI 算法的实用效果。
 
 
-|  <img src="https://user-images.githubusercontent.com/45199522/202378223-f7899f71-ae05-4f2a-b814-60707c013c1f.gif"  width = "300" height="60%" />                      | <img src="https://user-images.githubusercontent.com/59186797/202600222-a18e467d-5d93-41e1-80de-e3cac93c71fd.gif" width="300" height="60%"/> | 
-| :----------------------------------------------------: | :-------------: | 
-| PP-DataClean 数据清洗效果图   | DataAug 数据自动扩充效果图 |
+|  <img src="https://user-images.githubusercontent.com/45199522/202378223-f7899f71-ae05-4f2a-b814-60707c013c1f.gif"  width = "300" height="60%" />                      | <img src="https://user-images.githubusercontent.com/59186797/202600222-a18e467d-5d93-41e1-80de-e3cac93c71fd.gif" width="300" height="60%"/> |
+| :----------------------------------------------------: | :-------------: |
+| DataClean 数据清洗效果图   | DataAug 数据自动扩充效果图 |
 
-  <img src="https://user-images.githubusercontent.com/59186797/202604566-56083c28-a17c-4a60-ba6c-acfb1bdda2d7.gif"  width = "300" height = "60%" />                      | <img src="https://user-images.githubusercontent.com/59186797/202602413-00a7c51e-4e97-4f37-9fa0-febe6c2f69f3.gif" width="300" height = "60%"/> | 
-| :----------------------------------------------------: | :-------------: | 
+  <img src="https://user-images.githubusercontent.com/59186797/202604566-56083c28-a17c-4a60-ba6c-acfb1bdda2d7.gif"  width = "300" height = "60%" />                      | <img src="https://user-images.githubusercontent.com/59186797/202602413-00a7c51e-4e97-4f37-9fa0-febe6c2f69f3.gif" width="300" height = "60%"/> |
+| :----------------------------------------------------: | :-------------: |
 | 120+经典产业数据集   | 7+半自动标注工具 |
 
 
@@ -36,7 +36,7 @@ EasyData 旨在打造一套通用、领先且实用的数据自动扩充与数�
 
 ## ⚡ 快速开始
 
-- [数据清洗快速体验](docs/zh_CN/PP-DataClean/quick_start.md)
+- [数据清洗快速体验](docs/zh_CN/DataClean/quick_start.md)
 - [数据合成工具快速体验](docs/zh_CN/DataAug/quick_start.md)
 - [开源数据集和标注工具大全](docs/zh_CN/datasets/dataset.md)
 
@@ -52,23 +52,23 @@ EasyData 旨在打造一套通用、领先且实用的数据自动扩充与数�
 
 | 类别 | 亮点 | 文档说明 | 模型下载 |
 | :--: | :--: | :------: | :------: |
-|图像方向矫正|自动矫正图像，大大提升多项视觉任务在旋转图像上精度|[文档](docs/zh_CN/PP-DataClean/image_orientation_correction.md)|[下载链接](https://paddleclas.bj.bcebos.com/models/PULC/inference/image_orientation_infer.tar)|
-|模糊图像过滤|判断图像是否模糊，可以广泛应用于模糊图像过滤、视觉相关业务的前处理等|[文档](docs/zh_CN/PP-DataClean/blured_image_filtering.md)|[下载链接](https://paddleclas.bj.bcebos.com/models/PULC/inference/clarity_assessment_infer.tar)|
-|广告码图像过滤|判断图像是否含有二维码、条形码、小程序码，可以广泛应用于广告码过滤、审核等业务|[文档](docs/zh_CN/PP-DataClean/code_image_filtering.md)|[下载链接](https://paddleclas.bj.bcebos.com/models/PULC/inference/code_exists_infer.tar)|
+|图像方向矫正|自动矫正图像，大大提升多项视觉任务在旋转图像上精度|[文档](docs/zh_CN/DataClean/image_orientation_correction.md)|[下载链接](https://paddleclas.bj.bcebos.com/models/PULC/inference/image_orientation_infer.tar)|
+|模糊图像过滤|判断图像是否模糊，可以广泛应用于模糊图像过滤、视觉相关业务的前处理等|[文档](docs/zh_CN/DataClean/blured_image_filtering.md)|[下载链接](https://paddleclas.bj.bcebos.com/models/PULC/inference/clarity_assessment_infer.tar)|
+|广告码图像过滤|判断图像是否含有二维码、条形码、小程序码，可以广泛应用于广告码过滤、审核等业务|[文档](docs/zh_CN/DataClean/code_image_filtering.md)|[下载链接](https://paddleclas.bj.bcebos.com/models/PULC/inference/code_exists_infer.tar)|
 
 
 ## 📖 文档教程
 
 - 数据清洗
-  - [快速体验](docs/zh_CN/PP-DataClean/quick_start.md)
-  - [数据清洗工具集](docs/zh_CN/PP-DataClean/PP-DataClean.md)
-    - [图像方向校正工具](docs/zh_CN/PP-DataClean/image_orientation_correction.md)
-    - [模糊图像过滤工具](docs/zh_CN/PP-DataClean/blured_image_filtering.md)
-    - [二维码图像过滤工具](docs/zh_CN/PP-DataClean/code_image_filtering.md)
+  - [快速体验](docs/zh_CN/DataClean/quick_start.md)
+  - [数据清洗工具集](docs/zh_CN/DataClean/DataClean.md)
+    - [图像方向校正工具](docs/zh_CN/DataClean/image_orientation_correction.md)
+    - [模糊图像过滤工具](docs/zh_CN/DataClean/blured_image_filtering.md)
+    - [二维码图像过滤工具](docs/zh_CN/DataClean/code_image_filtering.md)
 - 数据扩充
   - [快速体验](docs/zh_CN/DataAug/quick_start.md)
   - [流程详解](docs/zh_CN/DataAug/DataAug.md)
-  
+
 - [标注工具](docs/zh_CN/datasets/dataset.md)
   - 计算机视觉
     - [半自动标注工具PPOCRLabelv2](docs/zh_CN/datasets/Annotation_tool/PPOCRLabelv2.md)

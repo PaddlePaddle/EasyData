@@ -1,4 +1,4 @@
-# PP-DataClean 快速开始
+# DataClean 快速开始
 
 ------
 
@@ -198,7 +198,7 @@ print(results)
 * `model`：用于指定预测模型，目前支持图像方向矫正模型 `image_orientation`、模糊图像过滤模型 `clarity_assessment`、二维码图像过滤模型 `code_exists`；
 * `device`：用于指定预测平台，目前支持 `CPU`、`GPU`，默认为 `CPU`；
 
-同样以图像方向矫正模型为例，在与 PaddleClas 图像分类模型结合使用时，可以参考示例[代码](../../../deploy/python/ppdataclean/demo.py)。
+同样以图像方向矫正模型为例，在与 PaddleClas 图像分类模型结合使用时，可以参考示例[代码](../../../deploy/python/dataclean/demos/paddleclas_demo.py)，以及在与 PaddleOCR 光学文字识别模型结合使用时，可以参考示例[代码](../../../deploy/python/dataclean/demos/paddleocr_demo.py)。
 
 ## 3. 小结
 

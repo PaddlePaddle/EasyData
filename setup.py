@@ -44,7 +44,7 @@ setup(
     keywords=[
         'PaddlePaddle',
         'DataAug',
-        'PP-DataClean',
+        'DataClean',
     ],
     classifiers=[
         'Intended Audience :: Developers',
