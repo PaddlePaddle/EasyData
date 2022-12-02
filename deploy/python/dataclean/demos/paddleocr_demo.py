@@ -37,7 +37,6 @@ def main(img_path):
     for line in result:
         print(line)
 
-    # show the result
     image = Image.open(img_path).convert('RGB')
     boxes = [line[0] for line in result]
     txts = [line[1][0] for line in result]
