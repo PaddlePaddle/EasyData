@@ -9,7 +9,7 @@ EasyData 旨在打造一套通用、领先且实用的数据自动扩充与数�
 
 |  <img src="https://user-images.githubusercontent.com/45199522/202378223-f7899f71-ae05-4f2a-b814-60707c013c1f.gif"  width = "300" height="60%" />                      | <img src="https://user-images.githubusercontent.com/59186797/202600222-a18e467d-5d93-41e1-80de-e3cac93c71fd.gif" width="300" height="60%"/> | 
 | :----------------------------------------------------: | :-------------: | 
-| PP-DataClean 数据清洗效果图   | PP-DataAug 数据自动扩充效果图 |
+| PP-DataClean 数据清洗效果图   | DataAug 数据自动扩充效果图 |
 
   <img src="https://user-images.githubusercontent.com/59186797/202604566-56083c28-a17c-4a60-ba6c-acfb1bdda2d7.gif"  width = "300" height = "60%" />                      | <img src="https://user-images.githubusercontent.com/59186797/202602413-00a7c51e-4e97-4f37-9fa0-febe6c2f69f3.gif" width="300" height = "60%"/> | 
 | :----------------------------------------------------: | :-------------: | 
@@ -37,7 +37,7 @@ EasyData 旨在打造一套通用、领先且实用的数据自动扩充与数�
 ## ⚡ 快速开始
 
 - [数据清洗快速体验](docs/zh_CN/PP-DataClean/quick_start.md)
-- [数据合成工具快速体验](docs/zh_CN/PP-DataAug/quick_start.md)
+- [数据合成工具快速体验](docs/zh_CN/DataAug/quick_start.md)
 - [开源数据集和标注工具大全](docs/zh_CN/datasets/dataset.md)
 
 ## 👫 开源社区
@@ -66,8 +66,8 @@ EasyData 旨在打造一套通用、领先且实用的数据自动扩充与数�
     - [模糊图像过滤工具](docs/zh_CN/PP-DataClean/blured_image_filtering.md)
     - [二维码图像过滤工具](docs/zh_CN/PP-DataClean/code_image_filtering.md)
 - 数据扩充
-  - [快速体验](docs/zh_CN/PP-DataAug/quick_start.md)
-  - [流程详解](docs/zh_CN/PP-DataAug/DataAug.md)
+  - [快速体验](docs/zh_CN/DataAug/quick_start.md)
+  - [流程详解](docs/zh_CN/DataAug/DataAug.md)
   
 - [标注工具](docs/zh_CN/datasets/dataset.md)
   - 计算机视觉

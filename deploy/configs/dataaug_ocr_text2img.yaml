@@ -1,6 +1,6 @@
 DataGen:
   mode: text2img
-  config: "deploy/configs/ppdataaug/ocr_rec_gen.yaml"
+  config: "deploy/configs/dataaug/ocr_rec_gen.yaml"
   gen_num: 5
   out_dir: "test"
   bg_num_per_word: 5

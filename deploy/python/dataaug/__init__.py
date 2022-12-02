@@ -41,16 +41,16 @@ from ppcv.engine.pipeline import Pipeline
 from ppcv.utils.logger import setup_logger
 from ppcv.core.config import ArgsParser
 
-from python.ppdataaug.utils.utility import get_label, rm_repeat, check_dir, concat_file
-from python.ppdataaug.utils import config
-from python.ppdataaug.utils import logger
-from python.ppdataaug.utils.get_image_list import get_image_list_from_label_file
-from python.ppdataaug.gen_img import GenAug
-from python.ppdataaug.gen_ocr_rec import GenOCR
-from python.ppdataaug.predict.build_gallery import GalleryBuilder
+from python.dataaug.utils.utility import get_label, rm_repeat, check_dir, concat_file
+from python.dataaug.utils import config
+from python.dataaug.utils import logger
+from python.dataaug.utils.get_image_list import get_image_list_from_label_file
+from python.dataaug.gen_img import GenAug
+from python.dataaug.gen_ocr_rec import GenOCR
+from python.dataaug.predict.build_gallery import GalleryBuilder
 
 
-class PPDataAug(object):
+class DataAug(object):
 
     def __init__(self, cfg):
         self.save_list = []

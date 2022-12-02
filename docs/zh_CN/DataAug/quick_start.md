@@ -1,4 +1,4 @@
-# PP-DataAug 快速开始
+# DataAug 快速开始
 
 - [1. 安装](#1)
   - [1.1 安装PaddlePaddle](#11)
@@ -13,7 +13,7 @@
 - [4. 小节](#4)
 
 
-本文主要介绍EasyData whl包对[PP-DataAug](./DataAug.md)工具的快速使用，如需使用数据质量提升相关功能，请参考教程[PP-DataClean](../PP-DataClean/quick_start.md)
+本文主要介绍EasyData whl包对[DataAug](./DataAug.md)工具的快速使用，如需使用数据质量提升相关功能，请参考教程[DataClean](../DataClean/quick_start.md)
 
 
 <a name="1"></a>
@@ -58,11 +58,11 @@ python setup.py install
 <a name="21"></a>
 ### 2.1 命令行使用
 
-PP-DataAug 提供两种数据自动扩充模式:
+DataAug 提供两种数据自动扩充模式:
 
 - img2img
 
-适用于图像识别类任务（例如：图像分类、图像识别、OCR文本识别）， 提供原始图片，PP-DataAug将自动完成基于图片的数据增广、筛选、清洗功能，输出扩充后的数据集。
+适用于图像识别类任务（例如：图像分类、图像识别、OCR文本识别）， 提供原始图片，DataAug将自动完成基于图片的数据增广、筛选、清洗功能，输出扩充后的数据集。
 
 以分类任务为例，准备原始训练数据和标签文件，其中标签文件内容为：
 
@@ -127,7 +127,7 @@ demo/ocr_rec/
 #### 2.1.1 图像分类
 
 ```bash
-easydata --model ppdataaug --ori_data_dir demo/clas_data/ --label_file demo/clas_data/train_list.txt --gen_mode img2img
+easydata --model dataaug --ori_data_dir demo/clas_data/ --label_file demo/clas_data/train_list.txt --gen_mode img2img
 ```
 
 运行该命令后，会输出增广后的图像和标签文件，增广图像路径默认在test目录下，该目录下有对应的增广子文件夹，如下所示：
@@ -162,7 +162,7 @@ easydata --model ppdataaug --ori_data_dir demo/clas_data/ --label_file demo/clas
 输入原始图像，其中过滤模型使用ocr_rec
 
 ```bash
-easydata --model ppdataaug --ori_data_dir demo/ocr_data/ --label_file demo/ocr_data/train_list.txt --gen_mode img2img --model_type ocr_rec
+easydata --model dataaug --ori_data_dir demo/ocr_data/ --label_file demo/ocr_data/train_list.txt --gen_mode img2img --model_type ocr_rec
 ```
 
 - text2img
@@ -170,7 +170,7 @@ easydata --model ppdataaug --ori_data_dir demo/ocr_data/ --label_file demo/ocr_d
 输入文本数据，生成图像数据，需提供语料路径、背景图路径，如需指定其他字体，可以添加参数`--font_dir {path to font}`:
 
 ```bash
-easydata --model ppdataaug --bg_img_dir demo/ocr_rec/bg --corpus_file demo/ocr_rec/corpus.txt --gen_mode text2img --model_type ocr_rec
+easydata --model dataaug --bg_img_dir demo/ocr_rec/bg --corpus_file demo/ocr_rec/corpus.txt --gen_mode text2img --model_type ocr_rec
 ```
 
 运行该命令后，会输出生成的图像和标签文件，输出图像默认在test目录下，如下所示：
@@ -200,7 +200,7 @@ test/0/9_n01682714_8438.JPEG	停车场
 由于图像识别任务的暂时无法返回预测score，因此不使用大模型过滤，设置 `--use_big_model False`
 
 ```bash
-easydata --model ppdataaug --ori_data_dir demo/shitu_data --label_file demo/shitu_data/train_list.txt --gen_mode img2img --use_big_model False
+easydata --model dataaug --ori_data_dir demo/shitu_data --label_file demo/shitu_data/train_list.txt --gen_mode img2img --use_big_model False
 ```
 
 <a name="22"></a>
@@ -210,8 +210,8 @@ easydata不仅支持命令行使用，还支持Python脚本进行调用使用，
 ```python
 from easydata import EasyData
 
-ppdataaug = EasyData(model='ppdataaug', ori_data_dir='demo/clas_data', label_file='demo/clas_data/train_list.txt', gen_mode='img2img',model_type='cls')
-ppdataaug.predict()
+dataaug = EasyData(model='dataaug', ori_data_dir='demo/clas_data', label_file='demo/clas_data/train_list.txt', gen_mode='img2img',model_type='cls')
+dataaug.predict()
 ```
 如需更换其他场景，可以修改 `gen_mode` 和 `model_type` 字段，具体参数说明可以参考第三节
 
@@ -220,7 +220,7 @@ ppdataaug.predict()
 ## 3. 参数说明
 | 字段 | 任务类型 |说明 | 默认值 |
 |---|---|---|---|
-| model | 通用 |使用的模型工具，可选ppdataaug,ppldi | ppdataaug |
+| model | 通用 |使用的模型工具，可选dataaug,image_orientation,clarity_assessment,code_exists | dataaug |
 | gen_mode | 数据生成 | 数据生成类型，可选 img2img, text2img | img2img |
 | model_type | 数据生成 | 场景模型类型，可选 cls, ocr_rec | cls |
 | ori_data_dir | 数据生成 | 原始数据目录 | None |

@@ -17,7 +17,7 @@ import copy
 import argparse
 import yaml
 
-from python.ppdataaug.utils import logger
+from python.dataaug.utils import logger
 
 __all__ = ['get_config', 'print_config']
 
@@ -201,7 +201,7 @@ def get_config(fname, overrides=None, show=True):
 
 
 def parser():
-    parser = argparse.ArgumentParser("ppdataaug script")
+    parser = argparse.ArgumentParser("dataaug script")
     parser.add_argument('-c',
                         '--config',
                         type=str,
@@ -219,7 +219,7 @@ def parser():
     parser.add_argument('-m',
                         '--model',
                         type=str,
-                        default="ppdataaug",
+                        default="dataaug",
                         help='wheather mode to run')
     return parser
 

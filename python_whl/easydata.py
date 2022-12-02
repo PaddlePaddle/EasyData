@@ -25,10 +25,10 @@ import ast
 from ppcv.engine.pipeline import Pipeline
 from ppcv.utils.download import get_demo_path
 from utils.utils import load_yaml
-from python.ppdataaug import PPDataAug
-from python.ppdataaug.utils import config
-from python.ppdataaug.gen_ocr_rec import GenOCR
-from python.ppdataaug.utils import logger
+from python.dataaug import DataAug
+from python.dataaug.utils import config
+from python.dataaug.gen_ocr_rec import GenOCR
+from python.dataaug.utils import logger
 
 __all__ = ['EasyData']
 
@@ -36,10 +36,10 @@ VERSION = '0.5.0.1'
 
 PPDA_CONFIG = {
     'img2img': {
-        'config': 'deploy/configs/ppdataaug_clas.yaml'
+        'config': 'deploy/configs/dataaug_clas.yaml'
     },
     'text2img': {
-        'config': 'deploy/configs/ppdataaug_ocr_text2img.yaml'
+        'config': 'deploy/configs/dataaug_ocr_text2img.yaml'
     }
 }
 
@@ -122,7 +122,7 @@ def parse_args():
     parser.add_argument(
         "--model",
         type=str,
-        default="ppdataaug",
+        default="dataaug",
     )
     parser.add_argument(
         "--run_mode",
@@ -199,7 +199,7 @@ def parse_args():
     return parser.parse_known_args()[0]
 
 
-class PPDA(PPDataAug):
+class DA(DataAug):
 
     def __init__(self, **kwargs):
         args = parse_args()
@@ -264,14 +264,14 @@ class EasyData(object):
 
     def __init__(self, **cfg):
         self.model = cfg['model']
-        if self.model == "ppdataaug":
-            self.pipeline = PPDA(**cfg)
+        if self.model == "dataaug":
+            self.pipeline = DA(**cfg)
         else:
             FLAGS = init_pipeline_config(**cfg)
             self.pipeline = Pipeline(FLAGS)
 
     def predict(self, input=None):
-        if self.model == "ppdataaug":
+        if self.model == "dataaug":
             return self.pipeline.predict()
         else:
             return self.pipeline.run(input)
